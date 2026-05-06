@@ -160,10 +160,20 @@ E:\Github\Resultados de futbol EN VIVO\
 │       └── database.sqlite
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── ...
-│   ├── vite.config.js (configurado con proxy a localhost:3000)
+│   │   ├── App.jsx (home con partidos del día y Sidebar)
+│   │   ├── main.jsx (React Router configurado)
+│   │   ├── components/
+│   │   │   ├── Sidebar.jsx (menú lateral con ligas)
+│   │   │   ├── Sidebar.css
+│   │   │   ├── PartidoDetail.jsx (ficha completa del partido)
+│   │   │   ├── PartidoDetail.css
+│   │   │   ├── LigaDetail.jsx (pestañas: tabla, fixture, goleadores, etc.)
+│   │   │   └── LigaDetail.css
+│   │   ├── services/
+│   │   │   └── partidosService.js (servicio para consumir API)
+│   │   ├── App.css
+│   │   └── index.css
+│   ├── vite.config.js (proxy a localhost:3000)
 │   └── package.json
 └── context.md
 ```
@@ -184,42 +194,36 @@ E:\Github\Resultados de futbol EN VIVO\
 - **Estado:** Código subido a la rama `main`
 
 ## Estado Actual
+### Backend (NestJS + TypeORM + SQLite)
 - ✅ Proyecto NestJS creado
-- ✅ TypeORM configurado con SQLite
-- ✅ Base de datos movida a `backend/database/database.sqlite`
+- ✅ TypeORM configurado con SQLite (`backend/database/database.sqlite`)
 - ✅ Stack definido (React + API-Football v3 + Polling)
-- ✅ Modelo de datos definido (12 entidades)
-- ✅ Endpoints planeados
-- ✅ Entidades creadas (Liga, Equipo, Jugador, Partido, Gol, Tarjeta, Formación, Estadística, TablaPosición, Goleador, Asistidor, Amarilla)
-- ✅ Módulos generados para todas las entidades (con service y controller)
+- ✅ Modelo de datos definido (12 entidades con relaciones)
+- ✅ Endpoints planeados (CRUD completo)
+- ✅ 12 entidades creadas:
+  - `Liga`, `Equipo`, `Jugador`, `Partido`, `Gol`, `Tarjeta`
+  - `Formación`, `Estadística`, `TablaPosición`, `Goleador`, `Asistidor`, `Amarilla`
+- ✅ Módulos, servicios y controladores generados para todas las entidades
+- ✅ Endpoints CRUD implementados en todos los controladores
 - ✅ Servidor iniciado, tablas creadas en base de datos
-- ✅ Endpoints CRUD implementados en todas las entidades
-- ✅ Repositorio GitHub inicializado y código subido
-- ✅ Frontend React + Vite creado
-- ✅ Proxy configurado en Vite para comunicación con backend
+
+### Frontend (React + Vite)
+- ✅ Proyecto React + Vite creado en `/frontend`
+- ✅ Proxy configurado en Vite para comunicación con backend (localhost:3000)
+- ✅ React Router instalado y configurado (`main.jsx`)
 - ✅ Servicio `partidosService.js` creado para consumir API
-- ✅ Componente `App.jsx` creado con:
-  - Lista de partidos del día
-  - Franja de goles mostrada debajo de cada partido
-  - Polling cada 30 segundos para actualizar datos
-  - Integración con Sidebar
-  - Click en partido abre nueva ventana con ficha
-- ✅ Estilos básicos en `App.css`
-- ✅ Componente `Sidebar.jsx` creado con:
-  - Lista de ligas desde API
-  - Navegación a `/liga/:id` al hacer click
-- ✅ Estilos para Sidebar en `Sidebar.css`
-- ✅ Componente `PartidoDetail.jsx` creado con:
-  - Ficha completa del partido
-  - Formaciones, goles, tarjetas, estadísticas
-- ✅ Estilos para PartidoDetail en `PartidoDetail.css`
-- ✅ React Router instalado y configurado en `main.jsx`
-- ✅ Componente `LigaDetail.jsx` creado con:
-  - Pestañas (tabs) para Tabla, Fixture, Goleadores, Asistidores, Amarillas
-  - Tabla de posiciones funcional
-  - Lista de goleadores funcional
-  - Lista de asistidores funcional
-  - Lista de amonestados funcional
-- ✅ Estilos para LigaDetail en `LigaDetail.css`
-- ⏳ Pendiente: Fixture con navegación por fechas
-- ⏳ Pendiente: Integración con API-Football
+- ✅ Componentes creados:
+  - `App.jsx`: Home con partidos del día, franja de goles, polling cada 30s
+  - `Sidebar.jsx`: Menú lateral con ligas, navegación a `/liga/:id`
+  - `PartidoDetail.jsx`: Ficha completa del partido (formaciones, goles, tarjetas, estadísticas)
+  - `LigaDetail.jsx`: Pestañas para Tabla, Fixture, Goleadores, Asistidores, Amarillas
+- ✅ Estilos creados: `App.css`, `Sidebar.css`, `PartidoDetail.css`, `LigaDetail.css`
+
+### Repositorio
+- ✅ GitHub inicializado: https://github.com/alanfoa/ResultadosDeFutbol
+- ✅ Código subido a la rama `main` (múltiples commits)
+
+### Pendiente
+- ⏳ Fixture con navegación por fechas (flechas, de la 1ª a la última fecha)
+- ⏳ Integración con API-Football v3 (estrategia para 100 solicitudes/día)
+- ⏳ Carga inicial de ligas, equipos y partidos desde API-Football
