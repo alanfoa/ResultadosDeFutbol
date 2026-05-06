@@ -1,0 +1,29 @@
+.partido-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resultado-detail {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.formaciones, .goles, .tarjetas, .estadisticas {
+  margin-top: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.formacion {
+  margin-bottom: 15px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}

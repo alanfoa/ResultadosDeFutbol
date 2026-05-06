@@ -90,80 +90,98 @@ Crear una página de uso personal/familiar para ver resultados de fútbol en tie
 
 ### Estructura Actual
 ```
-backend/
-├── src/
-│   ├── app.module.ts (configuración TypeORM SQLite)
-│   ├── app.controller.ts
-│   ├── app.service.ts
-│   ├── ligas/
-│   │   ├── ligas.module.ts
-│   │   ├── ligas.service.ts
-│   │   ├── ligas.controller.ts
-│   │   └── liga.entity.ts
-│   ├── equipos/
-│   │   ├── equipos.module.ts
-│   │   ├── equipos.service.ts
-│   │   ├── equipos.controller.ts
-│   │   └── equipo.entity.ts
-│   ├── jugadores/
-│   │   ├── jugadores.module.ts
-│   │   ├── jugadores.service.ts
-│   │   ├── jugadores.controller.ts
-│   │   └── jugador.entity.ts
-│   ├── partidos/
-│   │   ├── partidos.module.ts
-│   │   ├── partidos.service.ts
-│   │   ├── partidos.controller.ts
-│   │   └── partido.entity.ts
-│   ├── goles/
-│   │   ├── goles.module.ts
-│   │   ├── goles.service.ts
-│   │   ├── goles.controller.ts
-│   │   └── gol.entity.ts
-│   ├── tarjetas/
-│   │   ├── tarjetas.module.ts
-│   │   ├── tarjetas.service.ts
-│   │   ├── tarjetas.controller.ts
-│   │   └── tarjeta.entity.ts
-│   ├── formaciones/
-│   │   ├── formaciones.module.ts
-│   │   ├── formaciones.service.ts
-│   │   ├── formaciones.controller.ts
-│   │   └── formacion.entity.ts
-│   ├── estadisticas/
-│   │   ├── estadisticas.module.ts
-│   │   ├── estadisticas.service.ts
-│   │   ├── estadisticas.controller.ts
-│   │   └── estadistica.entity.ts
-│   ├── tabla-posicion/
-│   │   ├── tabla-posicion.module.ts
-│   │   ├── tabla-posicion.service.ts
-│   │   ├── tabla-posicion.controller.ts
-│   │   └── tabla-posicion.entity.ts
-│   ├── goleadores/
-│   │   ├── goleadores.module.ts
-│   │   ├── goleadores.service.ts
-│   │   ├── goleadores.controller.ts
-│   │   └── goleador.entity.ts
-│   ├── asistidores/
-│   │   ├── asistidores.module.ts
-│   │   ├── asistidores.service.ts
-│   │   ├── asistidores.controller.ts
-│   │   └── asistidor.entity.ts
-│   └── amarillas/
-│       ├── amarillas.module.ts
-│       ├── amarillas.service.ts
-│       ├── amarillas.controller.ts
-│       └── amarilla.entity.ts
-└── database/
-    └── database.sqlite
+E:\Github\Resultados de futbol EN VIVO\
+├── backend/
+│   ├── src/
+│   │   ├── app.module.ts (configuración TypeORM SQLite)
+│   │   ├── app.controller.ts
+│   │   ├── app.service.ts
+│   │   ├── ligas/
+│   │   │   ├── ligas.module.ts
+│   │   │   ├── ligas.service.ts
+│   │   │   ├── ligas.controller.ts
+│   │   │   └── liga.entity.ts
+│   │   ├── equipos/
+│   │   │   ├── equipos.module.ts
+│   │   │   ├── equipos.service.ts
+│   │   │   ├── equipos.controller.ts
+│   │   │   └── equipo.entity.ts
+│   │   ├── jugadores/
+│   │   │   ├── jugadores.module.ts
+│   │   │   ├── jugadores.service.ts
+│   │   │   ├── jugadores.controller.ts
+│   │   │   └── jugador.entity.ts
+│   │   ├── partidos/
+│   │   │   ├── partidos.module.ts
+│   │   │   ├── partidos.service.ts
+│   │   │   ├── partidos.controller.ts
+│   │   │   └── partido.entity.ts
+│   │   ├── goles/
+│   │   │   ├── goles.module.ts
+│   │   │   ├── goles.service.ts
+│   │   │   ├── goles.controller.ts
+│   │   │   └── gol.entity.ts
+│   │   ├── tarjetas/
+│   │   │   ├── tarjetas.module.ts
+│   │   │   ├── tarjetas.service.ts
+│   │   │   ├── tarjetas.controller.ts
+│   │   │   └── tarjeta.entity.ts
+│   │   ├── formaciones/
+│   │   │   ├── formaciones.module.ts
+│   │   │   ├── formaciones.service.ts
+│   │   │   ├── formaciones.controller.ts
+│   │   │   └── formacion.entity.ts
+│   │   ├── estadisticas/
+│   │   │   ├── estadisticas.module.ts
+│   │   │   ├── estadisticas.service.ts
+│   │   │   ├── estadisticas.controller.ts
+│   │   │   └── estadistica.entity.ts
+│   │   ├── tabla-posicion/
+│   │   │   ├── tabla-posicion.module.ts
+│   │   │   ├── tabla-posicion.service.ts
+│   │   │   ├── tabla-posicion.controller.ts
+│   │   │   └── tabla-posicion.entity.ts
+│   │   ├── goleadores/
+│   │   │   ├── goleadores.module.ts
+│   │   │   ├── goleadores.service.ts
+│   │   │   ├── goleadores.controller.ts
+│   │   │   └── goleador.entity.ts
+│   │   ├── asistidores/
+│   │   │   ├── asistidores.module.ts
+│   │   │   ├── asistidores.service.ts
+│   │   │   ├── asistidores.controller.ts
+│   │   │   └── asistidor.entity.ts
+│   │   └── amarillas/
+│   │       ├── amarillas.module.ts
+│   │       ├── amarillas.service.ts
+│   │       ├── amarillas.controller.ts
+│   │       └── amarilla.entity.ts
+│   └── database/
+│       └── database.sqlite
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── ...
+│   ├── vite.config.js (configurado con proxy a localhost:3000)
+│   └── package.json
+└── context.md
 ```
 
 ## Comandos Útiles
+### Backend
 - `npm run start:dev` - Inicia el servidor en modo desarrollo
 - `nest generate module <nombre>` - Crea un módulo
 - `nest generate service <nombre>` - Crea un servicio
 - `nest generate controller <nombre>` - Crea un controlador
+
+### Frontend
+- `npm run dev` - Inicia Vite en modo desarrollo (puerto 5173)
+- `npm run build` - Construye para producción
+
+## Repositorio
+- **GitHub:** https://github.com/alanfoa/ResultadosDeFutbol
+- **Estado:** Código subido a la rama `main`
 
 ## Estado Actual
 - ✅ Proyecto NestJS creado
@@ -175,7 +193,26 @@ backend/
 - ✅ Entidades creadas (Liga, Equipo, Jugador, Partido, Gol, Tarjeta, Formación, Estadística, TablaPosición, Goleador, Asistidor, Amarilla)
 - ✅ Módulos generados para todas las entidades (con service y controller)
 - ✅ Servidor iniciado, tablas creadas en base de datos
-- ✅ Endpoints CRUD implementados en Partidos (GET, GET:id, GET:hoy, POST, PUT, DELETE)
-- ✅ Endpoints CRUD implementados en Ligas, Equipos, Jugadores, Goles, Tarjetas, Formaciones, Estadísticas, TablaPosición, Goleadores, Asistidores, Amarillas
-- ⏳ Pendiente: Frontend con React
+- ✅ Endpoints CRUD implementados en todas las entidades
+- ✅ Repositorio GitHub inicializado y código subido
+- ✅ Frontend React + Vite creado
+- ✅ Proxy configurado en Vite para comunicación con backend
+- ✅ Servicio `partidosService.js` creado para consumir API
+- ✅ Componente `App.jsx` creado con:
+  - Lista de partidos del día
+  - Franja de goles mostrada debajo de cada partido
+  - Polling cada 30 segundos para actualizar datos
+  - Integración con Sidebar
+  - Click en partido abre nueva ventana con ficha
+- ✅ Estilos básicos en `App.css`
+- ✅ Componente `Sidebar.jsx` creado con:
+  - Lista de ligas desde API
+  - Selección de liga para filtrar contenido
+- ✅ Estilos para Sidebar en `Sidebar.css`
+- ✅ Componente `PartidoDetail.jsx` creado con:
+  - Ficha completa del partido
+  - Formaciones, goles, tarjetas, estadísticas
+- ✅ Estilos para PartidoDetail en `PartidoDetail.css`
+- ⏳ Pendiente: Navegación con React Router
+- ⏳ Pendiente: Tabla de posiciones, goleadores, asistidores, amarillas
 - ⏳ Pendiente: Integración con API-Football

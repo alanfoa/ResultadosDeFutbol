@@ -1,0 +1,71 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1a1a1a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+.partidos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.partido-card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.equipos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vs {
+  font-weight: bold;
+  color: #666;
+}
+
+.resultado {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.estado {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.goles-franja {
+  background: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.gol-item {
+  font-size: 14px;
+  color: #333;
+}
