@@ -207,12 +207,19 @@ E:\Github\Resultados de futbol EN VIVO\
 - ✅ Estilos básicos en `App.css`
 - ✅ Componente `Sidebar.jsx` creado con:
   - Lista de ligas desde API
-  - Selección de liga para filtrar contenido
+  - Navegación a `/liga/:id` al hacer click
 - ✅ Estilos para Sidebar en `Sidebar.css`
 - ✅ Componente `PartidoDetail.jsx` creado con:
   - Ficha completa del partido
   - Formaciones, goles, tarjetas, estadísticas
 - ✅ Estilos para PartidoDetail en `PartidoDetail.css`
-- ⏳ Pendiente: Navegación con React Router
-- ⏳ Pendiente: Tabla de posiciones, goleadores, asistidores, amarillas
+- ✅ React Router instalado y configurado en `main.jsx`
+- ✅ Componente `LigaDetail.jsx` creado con:
+  - Pestañas (tabs) para Tabla, Fixture, Goleadores, Asistidores, Amarillas
+  - Tabla de posiciones funcional
+  - Lista de goleadores funcional
+  - Lista de asistidores funcional
+  - Lista de amonestados funcional
+- ✅ Estilos para LigaDetail en `LigaDetail.css`
+- ⏳ Pendiente: Fixture con navegación por fechas
 - ⏳ Pendiente: Integración con API-Football
